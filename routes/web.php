@@ -31,6 +31,7 @@ Route::get('/post', 'PostController@view');
 Route::post('/addComment', 'PostController@store');
 Route::get('/servCont/{id}', 'HomeController@servCont');
 Route::get('fileSys', 'HomeController@fileSys');
+Route::get('/repos', 'HomeController@repos');
 //Route::get('/post/create', 'PostController@createComment');
 
 Route::resource('books', 'BooksController');

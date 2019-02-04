@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\UserRepository;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Http\Request;
 use TCG\Voyager\Models\post;
@@ -65,5 +66,9 @@ class HomeController extends Controller
     {
         return view('index.index_blog'//, ['wat' => '13wat']
         );
+    }
+
+    public function repos(UserRepository $user){
+        dd ($user);
     }
 }
