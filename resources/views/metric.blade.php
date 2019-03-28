@@ -13,7 +13,8 @@
         {{--{{$search[0]['dimensions']['0']['name']}}--}}
         {{--{{$search['dimensions']['0']['name']}} - {{$search['metric']['0']}}человек<br>--}}
         {{--@endforeach--}}
-        <div>
+        <div id="myVue">
+            @{{ vt }}<br>
             @for($i = 0; $i<8; $i++)
                 {{$searchEngine[$i]['dimensions']['0']['name']}} - {{$searchEngine[$i]['metrics']['0']}} человек<br>
             @endfor
