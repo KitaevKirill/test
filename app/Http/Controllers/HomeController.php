@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Alexusmai\YandexMetrika\YandexMetrika;
+use App\Category;
 use App\Repositories\UserRepository;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Http\Request;
@@ -68,7 +70,28 @@ class HomeController extends Controller
         );
     }
 
-    public function repos(UserRepository $user){
-        dd ($user);
+    public function repos(UserRepository $user)
+    {
+        dd($user);
     }
+
+    public function five()
+    {
+        $arr = Category::with('Child')->get();
+
+//        $arr = Category::with(['Child' => function ($query) {
+//            $query->orderBy('created_at', 'desc');
+//        }])->get();
+
+        return $arr->pluck('Child')->all();
+    }
+
+
+//->flatten(), ->collapse() - в одномерную
+    public function js()
+    {
+        return view('js');
+    }
+
+
 }

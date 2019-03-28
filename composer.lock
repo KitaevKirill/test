@@ -4,8 +4,62 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "63b3b207a897684f804d001368c908f8",
+    "content-hash": "97d33dcb144146d2d7fff87233be4772",
     "packages": [
+        {
+            "name": "alexusmai/yandex-metrika",
+            "version": "1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alexusmai/yandex-metrika.git",
+                "reference": "940e752f8d9f76fc429c4b176002d777e6c40128"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alexusmai/yandex-metrika/zipball/940e752f8d9f76fc429c4b176002d777e6c40128",
+                "reference": "940e752f8d9f76fc429c4b176002d777e6c40128",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.2",
+                "illuminate/support": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*|5.8.*",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Alexusmai\\YandexMetrika\\YandexMetrikaServiceProvider"
+                    ],
+                    "aliases": {
+                        "YandexMetrika": "Alexusmai\\YandexMetrika\\YandexMetrikaFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Alexusmai\\YandexMetrika\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Manekin",
+                    "email": "alexusmai@gmail.com"
+                }
+            ],
+            "description": "Laravel 5 Yandex Metrika",
+            "homepage": "https://github.com/alexusami/yandex-metrika",
+            "keywords": [
+                "laravel",
+                "metrika",
+                "yandex"
+            ],
+            "time": "2019-02-27T17:15:02+00:00"
+        },
         {
             "name": "arrilot/laravel-widgets",
             "version": "3.12",

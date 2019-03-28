@@ -33,6 +33,11 @@ Route::get('/servCont/{id}', 'HomeController@servCont');
 Route::get('fileSys', 'HomeController@fileSys');
 Route::get('/repos', 'HomeController@repos');
 //Route::get('/post/create', 'PostController@createComment');
+Route::get('/five', 'HomeController@five');
+Route::get('/jspractice', 'HomeController@js');
+Route::get('/metrica', 'PostController@metrica');
+Route::get('/metricaexample', 'PostController@metricaExample');
+
 
 Route::resource('books', 'BooksController');
 Route::resource('articles', 'ArticlesController');
